@@ -1,0 +1,29 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  http:
+    encoding:
+      force: true
+  jpa:
+    open-in-view: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+  datasource:
+    url: jdbc:mysql://localhost:3306/animal_sys
+    username: root
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    cassandra:
+      config: classpath:application.conf
+      ssl: true
+      keyspace-name: skskeyspace1
+      port: 9142
+      contact-points: cassandra.ap-northeast-1.amazonaws.com
+      username: chtadmin+1-at-204524936185
+      password: HG0osIDmJnOL3Q8eLavQyi6y7u8uhcpqF4fiNBUyc8s=
+ssl:
+  trustStore:
+    trustStoreLocation: /cassandra_truststore.jks
+    trustStorePassword: 123qweASD
